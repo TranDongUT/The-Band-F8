@@ -11,23 +11,22 @@ html{
 
 
 /* common (dùng chung) */
- .row{
+.row{
      display: flex;
      justify-content: space-around;
-
      margin-left: -8px;
      margin-right: -8px;
  }
  
- .col{
+.col{
     text-align: center;
     padding-left: 8px;
     padding-right: 8px;
- }
+}
 
  .col-full{
      width: 100%;
- }
+}
 
 .col-second{
     width: 50%;
@@ -61,7 +60,7 @@ kiểu dáng (font,...)
     height: 46px;
     background-color: #000;
     box-shadow: 0 1 10px #ccc;
-    z-index: 1;      
+    z-index: 1;
 }
 
 #nav{
@@ -81,7 +80,6 @@ kiểu dáng (font,...)
     text-transform: uppercase;
 }
 
-#nav li:hover > .sub-nav,
 #nav li:hover > a{
     color: #000;
     background-color: #ccc;
@@ -96,21 +94,39 @@ a{
     font-size: 12px;
 }
 
+/* .menu-btn{  
+    float: right;
+    padding: 0 24px;
+    line-height: 46px;
+}
+.nav-menu-icon{
+    display: none;
+    font-size: 15px;
+    color: white;
+} */
+
+#header .menu-btn{
+   display: none;
+}
+
+#header .menu-btn,
 #header .search-btn{
     float: right;
     padding: 0 24px;
 }
-
+#header .nav-menu-icon,
 #header .nav-search-icon{
     line-height: 46px;
     font-size: 15px;
     color: white;
 }
 
+.menu-btn:hover,
 #header .search-btn:hover{
     background-color: rgb(244, 67, 54);
     cursor: pointer;
 }
+
 
 #nav .sub-nav{
     position: absolute;
@@ -120,6 +136,10 @@ a{
     min-width: 160px;
     background-color: #fff;
     box-shadow: 0 0 10px #ccc;       
+}
+
+#nav li:hover > .sub-nav{
+    display: block;
 }
 
 #nav .sub-nav li{
@@ -201,9 +221,9 @@ a{
     padding: 32px 0 32px;
 } */
 
-.member-item{
+/* .member-item{
     width: 33.3333%;
-}
+} */
 
 #content .name-member{
     text-align: center;
@@ -212,7 +232,7 @@ a{
 
 #content .img-member{
     align-items: center;
-    width: 150px;
+    width: 100%;
     border-radius: 4px;
 }
 
