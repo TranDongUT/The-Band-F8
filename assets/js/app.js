@@ -14,7 +14,7 @@ setInterval(function(){
         $(".text-silder.active").classList.remove("active");
         textSliders[slideBegin].classList.add('active');
         Object.assign(slider.style,{
-            background : `url("/assets/img/slider/s${slideBegin+=1}.jpg")`,
+            background : `url("./assets/img/slider/s${slideBegin+=1}.jpg")`,
             backgroundSize : "contain",
             backgroundRepeat : "no-repeat",
         })
