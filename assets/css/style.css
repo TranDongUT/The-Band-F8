@@ -1,0 +1,502 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+/* common (dùng chung) */
+ .row{
+     display: flex;
+     justify-content: space-around;
+
+     margin-left: -8px;
+     margin-right: -8px;
+ }
+ 
+ .col{
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+ }
+
+ .col-full{
+     width: 100%;
+ }
+
+.col-second{
+    width: 50%;
+}
+
+.col-third{
+     width: 33.333%;
+ }
+
+#main{
+
+}
+
+
+/* Từ ngoài vào trong
+từ trên xuống dưới 
+từ tổng quan -> chi tiết */
+
+/* 
+Vị trí
+kích thước
+màu sắc
+kiểu dáng (font,...)
+*/
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+    background-color: #000;
+    box-shadow: 0 1 10px #ccc;
+    z-index: 1;      
+}
+
+#nav{
+   position: relative;
+   display: inline-block;
+}
+
+#nav > li{
+    line-height: 46px;
+    display: inline-block;
+}
+
+#nav > li > a{
+    padding: 0 24px;
+    color: #fff;
+    display: block;
+    text-transform: uppercase;
+}
+
+#nav li:hover > .sub-nav,
+#nav li:hover > a{
+    color: #000;
+    background-color: #ccc;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+#nav .nav-arrow-icon{
+    font-size: 12px;
+}
+
+#header .search-btn{
+    float: right;
+    padding: 0 24px;
+}
+
+#header .nav-search-icon{
+    line-height: 46px;
+    font-size: 15px;
+    color: white;
+}
+
+#header .search-btn:hover{
+    background-color: rgb(244, 67, 54);
+    cursor: pointer;
+}
+
+#nav .sub-nav{
+    position: absolute;
+    top: 100%;
+    display: none;
+    line-height: 36px;
+    min-width: 160px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #ccc;       
+}
+
+#nav .sub-nav li{
+    background-color: #fff;   
+    list-style: none;
+}
+
+#nav .sub-nav a{
+    padding: 0 16px; 
+    color: #000;
+}
+
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/slider/1.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#slider .text-silder{
+    position: absolute;
+    bottom: 32px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    display: none;
+}
+
+#slider .text-silder h2{
+    font-weight: 500;
+}
+
+#slider .text-silder p{
+    margin-top: 10px;
+}
+
+#slider .text-silder.active{
+    display: block;  
+}
+
+
+                    /* content css */
+
+/* about Member */
+#content .content-section{
+    width: 800px;
+    padding: 64px 16px 96px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading{
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 30px;
+}
+
+#content .section-sub-heading{
+    margin: 25px 0;
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about{
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 14.5px;
+    margin-bottom: 32px;
+}
+
+/* #content .member-list{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 32px 0 32px;
+} */
+
+.member-item{
+    width: 33.3333%;
+}
+
+#content .name-member{
+    text-align: center;
+    margin: 15px 0;
+}
+
+#content .img-member{
+    align-items: center;
+    width: 150px;
+    border-radius: 4px;
+}
+
+/* Content - tour-section */
+
+.tour-section{
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+.tickets{
+    margin-bottom: 32px;
+}
+
+.tickets li{
+    padding: 8px 16px;
+    background-color: #fff;
+    font-size: 15px;
+    color: #757575;
+    border-bottom: 1px solid #757575;
+    list-style: none;
+}
+
+.sold-out{
+    margin-left: 16px;
+    padding: 2px 8px;
+    background-color: #f44336;
+    color: #fff;
+}
+
+.quantity{
+    float: right;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+}
+
+    /* Places */
+.places-list{
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.place-item{
+    width: 33.3333%;
+}
+
+.place-img{
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover{
+    opacity: 0.6;
+}
+
+.place-body{
+    padding: 0 16px;
+    text-align: left;
+    background-color:#fff;
+    color: #000;
+    font-size: 15px;
+}
+
+.place-heading{
+    padding-top: 15px;
+}
+
+.place-time{
+    margin-top: 15px;
+    opacity: 0.6;
+}
+
+.place-content{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.place-buy-btn{
+    margin: 15px 0;
+    display: inline-block;
+    width: 108px;
+    height: 38px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.place-buy-btn:hover{
+    color: #000;
+    background-color: #ccc;
+}
+
+/* Contact */
+.contact{
+    padding-top: 32px;
+}
+
+.contact .contact-info{
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.contact .contact-info i{
+    display: inline-block;
+    width: 32px;
+}
+
+.contact-form{
+    font-size: 15px;
+    text-align: left;
+
+}
+
+.contact-form .form-control{
+    padding: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.contact-form .send-btn{
+    margin: 8px 0;
+    height: 40px;
+    width: 72px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    float: right;
+    cursor: pointer;
+}
+
+.send-btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.map-section .map-img{
+    width: 100%;
+    opacity: 0.8;
+}
+
+#footer{
+    margin: 70px 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #757575;
+    
+}
+
+#footer a{
+    color: #757575;
+}
+
+#footer .footer-social{
+    margin-bottom: 24px;   
+    font-size: 24px;  
+}
+
+#footer .copyright a{
+    text-decoration: underline;
+}
+
+
+
+                                    /* Modal buy tickets */
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;  
+}
+
+.modal.show{
+    display: flex;
+}
+
+
+.modal-container{
+    width: 900px;
+    max-width: calc(100% - 32px);
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 4px;
+    animation: show 0.4s;
+}
+
+
+@keyframes show {
+    from{
+        opacity: 0.3;
+        top: -200px;
+    }
+    to{
+        opacity: 1;
+        top: 0;
+    }
+    
+}
+
+.modal-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.modal-close:hover{
+    opacity: 1;
+}
+
+.modal-header{
+    height: 128px;
+    background-color: #009688;
+    color: #fff;
+    text-align: center;
+    line-height: 128px;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.modal-body{
+    padding: 16px;
+}
+
+.modal-body label{
+    display: block;
+    margin-top: 8px;
+}
+
+.modal-body input{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.modal-pay-btn{
+    margin-top: 8px;
+    height: 50px;
+    width: 100%;
+    border: none;
+    background-color: #009688;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal-pay-btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal-footer{
+    padding: 16px;
+    text-align: right;
+}
+
+.modal-footer-help{
+    color: #009688;
+    text-decoration: underline;
+    font-size: 15px;
+}
