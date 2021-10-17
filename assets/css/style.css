@@ -156,7 +156,7 @@ a{
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/assets/img/slider/1.jpg');
+    background: url("/assets/img/slider/s1.jpg");
     background-repeat: no-repeat;
     background-size: contain;
 }
